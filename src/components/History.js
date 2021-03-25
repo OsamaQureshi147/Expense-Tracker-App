@@ -12,8 +12,8 @@ export const History = () => {
             {transactions.map((transObj, index) => {
                 return (
                     <li key={index}>
-                        <span>{transObj.amount}</span>
                         <span>{transObj.desc}</span>
+                        <span>${transObj.amount}</span>
                     </li>
                 );
             })}

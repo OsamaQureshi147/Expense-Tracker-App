@@ -34,7 +34,7 @@ export const AccountSummary = () => {
                     INCOME
                 </h3>
                 <h4>
-                    {getIncome(transactions)}
+                    ${getIncome(transactions)}
                 </h4>
             </div>
             <div>
@@ -42,7 +42,7 @@ export const AccountSummary = () => {
                     EXPENSE
                 </h3>
                 <h4>
-                    {getExpense(transactions)}
+                    ${getExpense(transactions)}
                 </h4>
             </div>
         </div>

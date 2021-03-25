@@ -16,7 +16,7 @@ export default function Balance() {
     return (
         <div className='balance-container'>
             <h4>Balance</h4>
-            <h1>{getBalance(transactions)}</h1>
+            <h1>${getBalance(transactions)}</h1>
         </div>
     )
 }

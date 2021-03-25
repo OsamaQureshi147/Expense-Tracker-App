@@ -17,18 +17,21 @@ export const TransactForm = () => {
             amount: Number(amount),
             desc: description,
         })
+        setDescription('');
+        setAmount(0);
     }
 
     return (
         <form onSubmit={handleAddition}>
             <label>
                 Enter Description <br />
-                <input className='trans-input' onChange={(e) => setDescription(e.target.value)} type='text' required />
+                <input value={description} placeholder='Enter description of transaction' className='trans-input' onChange={(e) => setDescription(e.target.value)} type='text' required />
             </label>
             <br />
-            <label>
+            <br />
+            <label >
                 Enter Amount    <br />
-                <input className='trans-input' onChange={(e) => setAmount(e.target.value)} type='number' required />
+                <input value={amount} placeholder='Enter amount of transaction' className='trans-input' onChange={(e) => setAmount(e.target.value)} type='number' required />
             </label>
             <br />
             <input className='add-btn' type='submit' value='Add Transaction' />
