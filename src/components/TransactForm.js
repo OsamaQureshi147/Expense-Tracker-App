@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { TransContext } from "../transContext";
+
 
 export const TransactForm = () => {
-
+    let { addTransaction } = useContext(TransContext)
     const [description, setDescription] = useState('');
     const [amount, setAmount] = useState(0);
 
     const handleAddition = (e) => {
         e.preventDefault();
-        console.log(description, amount)
+        if (Number(amount) === 0) {
+            alert('Enter non-zero value!');
+            return false;
+        }
+        addTransaction({
+            amount: Number(amount),
+            desc: description,
+        })
     }
 
     return (
