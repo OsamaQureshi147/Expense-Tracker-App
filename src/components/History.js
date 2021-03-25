@@ -12,7 +12,10 @@ export const History = () => {
             {transactions.map((transObj, index) => {
                 return (
                     <li key={index}>
-                        <span>{transObj.desc}</span>
+                        <div>
+                            <button className='btn-delete'>X </button>
+                            <span>{transObj.desc}</span>
+                        </div>
                         <span>${transObj.amount}</span>
                     </li>
                 );

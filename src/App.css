@@ -64,3 +64,11 @@ h6 {
   box-shadow: 0 0 10px gray;
   margin-top: 8px;
 }
+
+.btn-delete {
+  margin-right: 5px;
+  background-color: red;
+  border-radius: 30px;
+  color: #efefef;
+  box-shadow: 0 0 5px red;
+}
