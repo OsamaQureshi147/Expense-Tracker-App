@@ -7,6 +7,7 @@ export const History = () => {
     let { transactions } = useContext(TransContext)
 
 
+
     return (
         <ul className='trans-history'>
             {transactions.map((transObj, index) => {
